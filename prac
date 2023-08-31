@@ -1,0 +1,47 @@
+#include<stdio.h>
+
+int main(){
+
+    char name[100];
+    printf("Name:\t");
+    scanf("%s", &name);
+
+    char gender;
+    printf("Gender:\t");\
+    scanf(" %c", &gender);
+
+        int age, pension, total_pen;
+            printf("Age:\t");
+            scanf("%d", &age);
+
+        //male
+        if( gender == 'M' || gender == 'm')
+        {
+            if( age >=90)
+                pension = 4000;
+        }
+            else if( age <90 && age >=60)
+        {
+                pension = 6000;
+        }
+                else if( age <60){
+                    pension = 0;
+                }
+                    //female
+                    if( gender == 'F' || gender == 'f'){
+                        if( age >=90)
+                            pension = 3000;
+                    }
+                        else if( age <90 && age >=60){
+                            pension = 5000;
+                        }
+                            else if( age <60){
+                                pension = 0;
+                            }
+
+        total_pen = pension - ( pension * 0.02 );
+            printf("Pension: %d\n", pension);
+            printf("Total Pension: %d\n", total_pen);
+
+        return 0;
+}
